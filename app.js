@@ -42,7 +42,7 @@ app.post('/', function (req,res){
             console.log(JSON.parse(data));
         })
     })
-    // request.write(jsonData);
+    request.write(jsonData);
     request.end();
 })
 
@@ -58,8 +58,7 @@ app.post("/failure",function (req,res){
 });
 
 
-//API KEY: 532ed546db16b7525225582d55930b35-us21
-// List ID: 31ad8a0904
+
 app.listen(process.env.PORT || 3000, function(){
     console.log("server is running on port 3000");
 })
